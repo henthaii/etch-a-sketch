@@ -1,8 +1,17 @@
-let etch = document.querySelector(".container");
+let etch = document.querySelectorAll(".container");
+console.log("Initial list size:", etch.length);
 
-const content = document.createElement("div");
-content.classList.add("content");
-content.textContent = "This is the glorious text-content!";
+etch.forEach((etch, index) => {
+    const newDiv = document.createElement('div');
+
+    newDiv.id = `uniqueDivId_$[index+1}`;
+    
+    parentElement.appendChild(newDiv);
+})
+
+
+
+
 
 /*
 etch.forEach(container => {
