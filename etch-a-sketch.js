@@ -1,24 +1,18 @@
-let etch = document.querySelectorAll(".container");
-console.log("Initial list size:", etch.length);
+function createGrid(rows, cols) {
+    const container = document.getElementById('container');
 
-etch.forEach((etch, index) => {
-    const newDiv = document.createElement('div');
+    for (let i = 0; i < rows; i++) {
+        const row = document.createElement('div');
+        row.classList.add('grid-row'); // Add a class for row styling
 
-    newDiv.id = `uniqueDivId_$[index+1}`;
-    
-    parentElement.appendChild(newDiv);
-})
+        for (let j = 0; j < cols; j++) {
+            const cell = document.createElement('div');
+            cell.classList.add('grid-cell'); // Add a class for cell styling
+            row.appendChild(cell);
+        }
+        container.appendChild(row);
+    }
+}
 
-
-
-
-
-/*
-etch.forEach(container => {
-
-    const boxOne = document.createElement("div");
-    const boxTwo = document.createElement("div");
-    const boxThree = document.createElement("div");
-    const boxFour = document.createElement("div");
-})*/
-
+// Create a 16x16 grid
+createGrid(16, 16);
