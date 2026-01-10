@@ -16,3 +16,8 @@ function createGrid(rows, cols) {
 
 // Create a 16x16 grid
 createGrid(16, 16);
+
+//Hover Effect Section
+//When the mouse hovers over a cell, the cell will change color.
+//Cell will stay colored even after the mouse leaves cell.
+
