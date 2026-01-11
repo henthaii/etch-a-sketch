@@ -4,11 +4,11 @@
     border:1px solid;
 }
 
-.grid-row {
+.gridRow {
     display:flex;
 }
 
-.grid-cell {
+.gridCell {
 width:30px;
 height:30px;
 border: 1px solid;
