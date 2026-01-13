@@ -37,8 +37,6 @@ const characterLimit = 3;
 function inputPrompt () {
     const userInput = prompt("Please enter the number of squares per side for the new grid. Max = 100");
     console.log("User inputted:", userInput);
-
-    i
 }
 
-start.addEventListener("click",inputPrompt);
+start.addEventListener("click",inputPrompt)
