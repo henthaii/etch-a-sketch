@@ -16,7 +16,9 @@ function createGrid(rows, cols) {
 
 // Create a 16x16 grid
 createGrid(16, 16);
-console.log(createGrid)
+//console.log(createGrid)
+
+
 //Hover Effect Section
 //When the mouse hovers over a cell, the cell will change color.
 //Cell will stay colored even after the mouse leaves cell.
@@ -30,13 +32,19 @@ hover.forEach(gridCell => {
     });
 })
 
-const start = document.querySelector("button");
-let userInput;
-const characterLimit = 3;
+//Add a button to send user a prompt.
+//Prompt will ask for input (up to 100).
+
+
+const start = document.querySelector("button").addEventListener("click",inputPrompt);
 
 function inputPrompt () {
     const userInput = prompt("Please enter the number of squares per side for the new grid. Max = 100");
-    console.log("User inputted:", userInput);
+        if (userInput == 0 || userInput > 100 || userInput === "") {
+            alert("Please enter a value between 1 and 100.");
+            console.log("User input rejected.");
+        } else {
+            console.log("User inputted:", userInput);
+            createGrid(userInput,userInput);
+        }
 }
-
-start.addEventListener("click",inputPrompt)
